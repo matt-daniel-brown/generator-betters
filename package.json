@@ -1,6 +1,6 @@
 {
   "name": "generator-betters",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Personalized version of Thoughtbot.io's Bitters scaffolding tool for Scss styles",
   "homepage": "https://github.com/matt-daniel-brown/generator-betters",
   "author": {
