@@ -1,7 +1,7 @@
 'use strict';
-const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
+var Generator = require('yeoman-generator');
+var chalk = require('chalk');
+var yosay = require('yosay');
 
 module.exports = class extends Generator {
   prompting() {
@@ -10,7 +10,7 @@ module.exports = class extends Generator {
       yosay('Welcome to the sublime ' + chalk.red('generator-betters') + ' generator!')
     );
 
-    const prompts = [
+    var prompts = [
       {
         type: 'confirm',
         name: 'someAnswer',
