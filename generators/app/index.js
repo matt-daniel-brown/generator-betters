@@ -28,15 +28,27 @@ module.exports = class extends Generator {
   writing() {
     this.fs.copy(
       this.templatePath('base'),
-      // this.templatePath('dummyfile.txt'),
+      // This.templatePath('dummyfile.txt'),
       // this.destinationPath('dummyfile.txt')
       this.destinationPath('base')
     );
   }
 
   install() {
-    // this.installDependencies();
-    console.log(chalk.cyan("\n\tAll done!\n\tBetters styles installed to directory ") + chalk.magenta.underline.bold("base/"));
-    
+    // This.installDependencies();
+
+    console.log(
+      chalk.cyan('\n\tAll done!\n\tBetters styles installed to directory ') +
+        chalk.magenta.underline.bold('base/')
+    );
+    console.log(
+      chalk.red('\n\tWARNING: YOU MUST FIRST INSTALL BOURBON TO USE THESE STYLES!!!')
+    );
+    console.log(chalk.underline('\n\tYou have 3 options: '));
+    console.log(
+      "\n\t\t1. Install using the gem file ('bourbon install',\n\t\tand then import bourbon before importing betters"
+    );
+    console.log("\t\t2. Install Bourbon via npm ('npm install --save bourbon')");
+    console.log("\t\t3. Install via Bower ('bower install --save bourbon')");
   }
 };
