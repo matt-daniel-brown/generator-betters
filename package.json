@@ -1,15 +1,16 @@
 {
   "name": "generator-betters",
   "version": "1.0.0",
-  "description":
-    "Personalized version of Thoughtbot.io's Bitters scaffolding tool for Scss styles",
+  "description": "Personalized version of Thoughtbot.io's Bitters scaffolding tool for Scss styles",
   "homepage": "https://github.com/matt-daniel-brown/generator-betters",
   "author": {
     "name": "matt-daniel-brown",
     "email": "matt@dev.mattdanielbrown.com",
     "url": "mattdanielbrown.com"
   },
-  "files": ["generators"],
+  "files": [
+    "generators"
+  ],
   "main": "generators/index.js",
   "keywords": [
     "bitters",
@@ -25,7 +26,7 @@
     "eslint-config-xo": "^0.18.2",
     "eslint-plugin-prettier": "^2.2.0",
     "husky": "^0.14.3",
-    "jest": "^21.0.0",
+    "jest": "^21.2.1",
     "jest-cli": "^21.0.0",
     "lint-staged": "^4.2.1",
     "nsp": "^2.6.3",
@@ -44,15 +45,25 @@
   "scripts": {
     "prepublish": "nsp check",
     "pretest": "eslint .",
-    "precommit": "lint-staged",
+    "precommit": "npm test",
+    "prepush": "npm test",
     "test": "jest"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.json": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": ["xo", "prettier"],
+    "extends": [
+      "xo",
+      "prettier"
+    ],
     "env": {
       "jest": true,
       "node": true
@@ -66,7 +77,9 @@
         }
       ]
     },
-    "plugins": ["prettier"]
+    "plugins": [
+      "prettier"
+    ]
   },
   "repository": "https://github.com/matt-daniel-brown/generator-betters",
   "license": "MIT"
